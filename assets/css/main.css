@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*
+main
+*/
+.main{
+    background-image: url(../images/pexels-karolina-grabowska-4705933.jpg);
+    min-height: 100vh;
+    background-size: 100% 100%;
+
+}
+/*
+navbar
+*/
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+.navbar {
+    background-color: rgba(0, 0,0, 0.5);
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul li {
+    float: right;
+    margin: 10px 0px ;
+}
+.navbar ul li a {
+    padding:15px ;
+    font-size: 20px;
+    color: beige;
+    text-decoration: none;
+}
+.navbar ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+.navbar ul .logo {
+    float: left;
+    background-color: rgba(0,0,0, 0);
+    padding: 0px;
+    margin: 0px;
+
+}
+.navbar .bars{
+    font-size: 20px;
+    color: bisque;
+    display: none;
+}
+/*
+content
+*/
+.main .content{
+    text-align: center;
+    padding: 80px;
+}
+.main .content h1 {
+    margin: 90px 0px 10px;
+    font-size: 50px;
+}
+.main .content button{
+    color: beige;
+    font-size: 24px;
+    padding: 5px 15px;
+    border:2px solid whitesmoke;
+    background-color: rgba(0,0,0,0.6);
+    margin: 0px 3px;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.main .content button:hover{
+    transform: scale(120%);
+    cursor:pointer ;
+    background-color: rgba(0,0,0,0.9);
+}
+/*mission*/
+.mission{
+    /*min-height: 100vh;*/
+    background-image: url(../images/pexels-polina-kovaleva-6788339.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mission .layout{
+    padding:25px 0px ;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.mission .layout h2{
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 4px solid  rgb(65, 65, 63); ;
+    color: rgb(65, 65, 63);
+    border-top: 0px;
+    border-radius: 15px;
+}
+.mission .layout .content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.mission .layout .content :where(.img ,.mission) {
+   width: 50%;
+}
+.mission .layout .content .img {
+    text-align: center;
+    width: 50%;
+}
+.mission .layout .content .mission {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mission .layout .content .mission .card {
+    width: 45%;
+    margin-bottom: 20px;
+}
+@media (max-width:768px) {
+    .navbar ul{
+        display: none;
+    }
+    .navbar .bars{
+     display: block;
+    }
+    .mission .layout .content :where(.img ,.mission){
+        width: 100%;
+    }
+    .mission .layout .content .img{
+        margin-bottom:20px ;
+    }
+    .mission .layout .content .mission .card{
+        width: 30%;
+        justify-content: space-around;
+    }
+    .main .content img{
+        width: 100%;
+    }
+    .mission .layout h2{
+        width: 40%;
+    }
+}
+@media (max-width:992px) {
+    .mission .layout .content .img{
+        width: 50%;
+        width: 800px;
+        min-width: fit-content;
+    }
+    
+}
+@media (max-width:576px){
+    .mission .layout .content .mission .card{
+        width: 90%;
+        text-align: center;
+    }
+    .main .content button{
+        padding: 5px 20px;
+    }
+
+    .mission .layout h2{
+        width: 50%;
+    }
+    .mission .layout .content .img{
+        max-width: fit-content;
+    }
+
+}
+
+
